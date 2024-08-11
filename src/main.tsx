@@ -1,6 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import RegisterPage from "pages/Register";
 import ShoppingPage from "pages/Shopping";
 import imgContent from "assets/images/shopping/content.jpg";
@@ -44,6 +48,10 @@ const router = createBrowserRouter([
             element: <SearchPage />,
           },
         ],
+      },
+      {
+        index: true,
+        element: <Navigate to="/register" replace />,
       },
     ],
   },

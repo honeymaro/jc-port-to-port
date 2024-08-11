@@ -59,10 +59,7 @@ function SearchPage() {
       setSearchKeyword(inputValue);
       setEnglishName("");
       setFoodInfoMessages([]);
-      const iframe = document.querySelector("iframe");
-      if (iframe) {
-        iframe.focus();
-      }
+      document.querySelector("input")?.blur?.();
     },
     [inputValue]
   );
@@ -178,7 +175,14 @@ function SearchPage() {
         )}
         {!searchKeyword && (
           <div>
-            <img src={imgSearchContent} width="100%" />
+            <div
+              css={css`
+                max-width: 512px;
+                margin: 0 auto;
+              `}
+            >
+              <img src={imgSearchContent} width="100%" />
+            </div>
           </div>
         )}
       </Wrapper>

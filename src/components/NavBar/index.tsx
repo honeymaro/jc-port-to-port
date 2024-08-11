@@ -15,6 +15,7 @@ const Wrapper = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 9999;
 
   & > a {
     flex: 1;
